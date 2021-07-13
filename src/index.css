@@ -2,3 +2,31 @@
   margin: 0;
   padding: 0;
 }
+
+.info-icon {
+  height: 3rem;
+  width: 3rem;
+  background-color: gray;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.icon {
+  font-size: 1.6rem;
+}
+
+.card-value {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+
+
+/*============ MOBILE BREAK POINTS ============*/
+
+@media (max-width: 780px) {
+  .mobile-card {
+    padding: 20px;
+
+  }
+}
