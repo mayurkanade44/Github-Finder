@@ -1,11 +1,40 @@
-import React from 'react'
+import React from "react";
 
 const github_reducer = (state, action) => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  switch (action.type) {
+    case "REMAINING_REQUEST":
+      return {
+        ...state,
+        error: { ...state.error, show: false },
+        requests: action.payload,
+      };
+    case "REMAINING_ZERO":
+      return {
+        ...state,
+        error: {
+          ...state.error,
+          show: true,
+          msg: "Sorry, you have exceeded your hourly limit",
+        },
+      };
+    case "SET_USER":
+      return {
+        ...state,
+        error: { ...state.error, show: false },
+        githubUser: action.payload,
+      };
+    case "USER_NOT_FOUND":
+      return {
+        ...state,
+        error: {
+          ...state.error,
+          show: true,
+          msg: "There Is No User With That Name",
+        },
+      };
+    default:
+      throw new Error(`No Matching "${action.type}" - action type`);
+  }
+};
 
-export default github_reducer
+export default github_reducer;

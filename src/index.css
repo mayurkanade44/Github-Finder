@@ -31,6 +31,12 @@ a {
   font-weight: 600;
 }
 
+.request {
+  padding: 2px 20px 0;
+  font-size: 1.5rem;
+  color: grey;
+}
+
 /*============ User ============*/
 
 .user-profile {
@@ -72,4 +78,18 @@ a {
   .mobile-card {
     padding: 20px;
   }
+  
+}
+
+@media (max-width: 540px) {
+  .mobile-search {
+    min-width: 340px;
+  }
+  .mobile-request {
+    margin-top: 7px;
+    padding-left: 4px;
+    padding-right: 0;
+    font-size: 1rem;
+  }
+  
 }
