@@ -1,6 +1,17 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f1f5f8;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: #78dec7;
 }
 
 .info-icon {
@@ -20,13 +31,45 @@
   font-weight: 600;
 }
 
+/*============ User ============*/
 
+.user-profile {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.followers-card {
+  background-color: white;
+  overflow: scroll;
+  height: 290px;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(45px, 1fr));
+  gap: 1.25rem 1rem;
+  padding: 1rem 2rem;
+}
+
+.followers-img {
+  height: 56px;
+  border-radius: 20%;
+  object-fit: cover;
+}
+
+.title {
+  display: inline;
+  background-color: white;
+  padding: 0 10px;
+  font-size: 1.5rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
 
 /*============ MOBILE BREAK POINTS ============*/
 
 @media (max-width: 780px) {
   .mobile-card {
     padding: 20px;
-
   }
 }

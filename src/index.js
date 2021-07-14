@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { GithubProvider } from "./context/context";
+import { GithubProvider } from "./context/github_context";
 
 ReactDOM.render(
   <React.StrictMode>

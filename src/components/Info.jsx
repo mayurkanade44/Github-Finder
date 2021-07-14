@@ -1,5 +1,5 @@
 import React from "react";
-import { useGithubContext } from "../context/context";
+import { useGithubContext } from "../context/github_context";
 import { GoRepo, GoGist } from "react-icons/go";
 import { FiUsers, FiUserPlus } from "react-icons/fi";
 
@@ -45,11 +45,16 @@ const Info = () => {
           const { id, icon, name, value, color } = item;
           return (
             <div className="col col-lg-3 col-md-6" key={id}>
-              <div className="card mx-3 mobile-card">
+              <div className="card mx-3 mobile-card border border-2 border-info">
                 <div className="card-body">
                   <h5 className="card-title text-center">{name}</h5>
                   <div className="d-flex justify-content-around mt-4">
-                    <h6 className="card-subtitle mb-2 info-icon" style={{color:color}}>{icon}</h6>
+                    <h6
+                      className="card-subtitle mb-2 info-icon"
+                      style={{ color: color }}
+                    >
+                      {icon}
+                    </h6>
                     <p className="card-value">{value}</p>
                   </div>
                 </div>
