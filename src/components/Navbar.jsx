@@ -20,7 +20,7 @@ const Navbar = () => {
               </h5>
             )}
 
-            {isUser ? (
+            {isUser && (
               <button
                 className="btn btn-outline-dark" style={{height:35}}
                 onClick={() => {
@@ -29,8 +29,6 @@ const Navbar = () => {
               >
                 logout
               </button>
-            ) : (
-              <button onClick={loginWithRedirect}>login</button>
             )}
           </div>
         </div>
