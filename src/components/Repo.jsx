@@ -1,5 +1,5 @@
 import React from "react";
-import { ExampleChart, Pie3D, Column3D, Bar3D, Doughnut2D } from "./Charts";
+import {Pie3D, Column3D, Bar3D, Doughnut2D } from "./Charts";
 import { useGithubContext } from "../context/github_context";
 
 const Repo = () => {
