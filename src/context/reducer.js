@@ -30,7 +30,7 @@ const github_reducer = (state, action) => {
         error: {
           ...state.error,
           show: true,
-          msg: "There Is No User With That Name",
+          msg: "There Is No User With That Username",
         },
       };
     case "SET_FOLLOWERS":
