@@ -39,9 +39,22 @@ export const GithubProvider = ({ children }) => {
   };
 
   const searchUser = async (user) => {
+    dispatch({ type: "LOADING" });
     try {
       const resp = await axios(`${rootUrl}/users/${user}`);
       dispatch({ type: "SET_USER", payload: resp.data });
+      const { repos_url, followers_url } = resp.data;
+      const result = await Promise.allSettled([
+        axios(`${repos_url}?per_page=100`),
+        axios(`${followers_url}?per_page=100`),
+      ]);
+      const [repos, followers] = result;
+      if (repos.status === "fulfilled") {
+        dispatch({ type: "SET_REPOS", payload: repos.value.data });
+      }
+      if (followers.status === "fulfilled") {
+        dispatch({ type: "SET_FOLLOWERS", payload: followers.value.data });
+      }
     } catch (error) {
       console.log(error);
       dispatch({ type: "USER_NOT_FOUND" });
