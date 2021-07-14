@@ -41,7 +41,7 @@ const Repo = () => {
   const mostStar = Object.values(languages)
     .sort((a, b) => {
       return b.stars - a.stars;
-    })
+    }).slice(0,5)
     .map((item) => {
       return { ...item, value: item.stars };
     });

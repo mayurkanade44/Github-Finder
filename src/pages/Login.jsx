@@ -1,7 +1,9 @@
 import React from 'react'
+import { useAuth0 } from '@auth0/auth0-react';
 import loginImg from '../images/login-img.svg'
 
 const Login = () => {
+  const {loginWithRedirect} = useAuth0()
     return (
       <>
         <div className="text-center mt-5">
@@ -13,7 +15,7 @@ const Login = () => {
           />
         </div>
         <div className="d-flex justify-content-center mt-3">
-          <button className="btn btn-warning btn-lg">Login</button>
+          <button className="btn btn-warning btn-lg" onClick={loginWithRedirect}>Login / Sign Up</button>
         </div>
       </>
     );
