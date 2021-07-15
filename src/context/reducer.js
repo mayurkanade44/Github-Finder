@@ -1,5 +1,3 @@
-import React from "react";
-
 const github_reducer = (state, action) => {
   switch (action.type) {
     case "REMAINING_REQUEST":

@@ -3,20 +3,19 @@ import { useGithubContext } from "../context/github_context";
 
 const Search = () => {
   const [user, setUser] = useState("");
-  const { requests, error: {show, msg}, searchUser } = useGithubContext();
-  
+  const {
+    requests,
+    error: { show, msg },
+    searchUser,
+  } = useGithubContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    searchUser(user)
+    searchUser(user);
   };
   return (
     <div className="container">
-      {show && (
-        <p className="text-danger text-center">
-        {msg}
-        </p>
-      )}
+      {show && <p className="text-danger text-center">{msg}</p>}
       <div className="d-flex justify-content-center">
         <form
           onSubmit={handleSubmit}
@@ -28,7 +27,9 @@ const Search = () => {
             onChange={(e) => setUser(e.target.value)}
             placeholder="Enter Github User"
           />
-          {!show && <button type="submit" className="btn btn-info ">Search</button>}
+          <button type="submit" className="btn btn-info ">
+            Search
+          </button>
           <h5 className="request mobile-request">Request: {requests}/60</h5>
         </form>
       </div>

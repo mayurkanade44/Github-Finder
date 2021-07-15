@@ -32,7 +32,6 @@ export const GithubProvider = ({ children }) => {
       if (request === 0) {
         dispatch({ type: "REMAINING_ZERO" });
       }
-      console.log(request);
     } catch (error) {
       console.log(error);
     }

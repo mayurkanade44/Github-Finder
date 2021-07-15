@@ -106,4 +106,14 @@ a {
     margin: 9px 12px !important;
     font-size: 15px;
   }
+  .mobile-name {
+    font-size: 15px !important;
+  }
+  .mobile-user-profile {
+  height: 4.4rem;
+  width: 4.2rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
 }

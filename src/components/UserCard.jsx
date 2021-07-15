@@ -12,25 +12,21 @@ const UserCard = () => {
     blog,
     bio,
     location,
-    twitter_usename,
   } = githubUser;
   return (
     <>
-      <h3 className='title'>
-        User
-      </h3>
+      <h3 className="title">User</h3>
       <div className="card p-4 border border-white">
         <div className="d-flex justify-content-between">
           <div>
             <img
               src={avatar_url}
-              className="d-inline user-profile"
+              className="d-inline user-profile mobile-user-profile"
               alt={name}
             />
-            <h4 className="d-inline ms-3">
+            <span className="ms-3 mobile-name " style={{ fontSize: 24, fontWeight: 700 }}>
               {name}
-              <br />
-            </h4>
+            </span>
           </div>
           <div className="d-flex align-items-center">
             <a href={html_url} className="btn btn-outline-info btn-lg">

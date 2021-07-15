@@ -46,28 +46,9 @@ const Repo = () => {
       return { ...item, value: item.stars };
     });
 
-
-  const chartData = [
-    {
-      label: "Venezuela",
-      value: "290",
-    },
-    {
-      label: "Saudi",
-      value: "260",
-    },
-    {
-      label: "Canada",
-      value: "180",
-    },
-    {
-      label: "Iran",
-      value: "140",
-    },
-  ];
   return (
     <div className="container">
-      <div className="row gy-3">
+      <div className="row gy-4">
         <div className="col-lg-5">
           <Pie3D data={mostUsed}></Pie3D>
           <p></p>
